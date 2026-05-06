@@ -10,19 +10,19 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">My Portfolio</div>
-            <ul class="nav-links">
-                <li><a href=".about-section">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <div class="menu-toggle" id="menu-toggle">
-                ☰
-            </div>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="logo">Mahdi <span class="logo-accent">Alemi</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact" class="btn-nav">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+    </nav>
+</header>
     
     <main class="main-section">
         <div class="left-panel">
@@ -46,7 +46,7 @@
         </div>
     </main>
 
-    <section class="about-section">
+    <section class="about-section" id="about">
     <div class="about-content">
         <h2>About Me</h2>
         <p>
@@ -71,7 +71,7 @@
     </div>
     </section>
 
-    <section class="skills-section">
+    <section class="skills-section" id="skills">
     <h1 class="section-title">My Skills</h1>
 
     <div class="skills-grid">
@@ -226,6 +226,43 @@
         </form>
     </div>
     </section>
+
+    <footer class="footer">
+    <div class="footer-wrapper">
+
+        <div class="footer-brand">
+            <h3 class="footer-logo">Mahdi Alemi</h3>
+            <p class="footer-tagline">Design. Develop. Deliver.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/AlemiMahdi" target="_blank"><i class="devicon-github-original"></i></a>
+                <a href="https://www.linkedin.com/in/mahdi-alemi-2a08a22b9/"><i class="devicon-linkedin-plain colored"></i></a>
+                <a href="#"><i class="devicon-twitter-original colored"></i></a>
+                <a href="#"><i class="devicon-instagram-plain colored"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h4>Contact</h4>
+            <p>📧 mahdi.alemi97@yahoo.com</p>
+            <p>📍 Stockholm, Sweden</p>
+        </div>
+
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Mahdi Alemi. All rights reserved.</p>
+    </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="java.js"></script>
