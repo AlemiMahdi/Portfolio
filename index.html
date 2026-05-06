@@ -45,8 +45,8 @@
             <img src="profilbild.png" alt="Portrait of Mahdi" class="profile-img">
         </div>
     </main>
+
     <section class="about-section">
-    
     <div class="about-content">
         <h2>About Me</h2>
         <p>
@@ -191,10 +191,44 @@
         </div>
 
     </div>
-</section>
+    </section>
 
+    <section class="contact-section" id="contact">
+    <h1 class="section-title">Contact Me</h1>
+    <div class="contact-wrapper">
+        <div class="contact-info">
+            <h3>Let's talk!</h3>
+            <p>Feel free to reach out for collaborations, job opportunities or just a chat.</p>
+            <div class="contact-links">
+                <a href="https://github.com/AlemiMahdi" target="_blank">
+                    <i class="devicon-github-original"></i> GitHub
+                </a>
+                <a href="mailto:din@email.com">
+                    📧 mahdi.alemi97@yahoo.com
+                </a>
+            </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+            <div class="form-group">
+                <input type="text" id="from_name" name="from_name" placeholder="Your Name" required>
+                <span class="error-msg" id="name-error">Please enter your name</span>
+            </div>
+            <div class="form-group">
+                <input type="email" id="from_email" name="from_email" placeholder="Your Email" required>
+                <span class="error-msg" id="email-error">Please enter a valid email</span>
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                <span class="error-msg" id="message-error">Please enter a message</span>
+            </div>
+            <button type="submit" class="btn primary" id="submit-btn">Send Message</button>
+            <p class="form-status" id="form-status"></p>
+        </form>
+    </div>
+    </section>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="java.js"></script>
+    
 </body>
 </html>
