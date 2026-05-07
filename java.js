@@ -90,3 +90,41 @@ navLinks.querySelectorAll("a").forEach(link =>{
         navLinks.classList.remove("open");
     })
 })
+
+const titles = [
+    "Fullstack Developer",
+    "Java Developer",
+    "C# Developer",
+    "Frontend Developer",
+    "Backkend Developer"
+];
+
+let titleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type(){
+    const current = titles[titleIndex];
+    const typingEl = document.getElementById("typing-text");
+
+    if(isDeleting){
+        typingEl.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingEl.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    let speed = isDeleting ? 60 : 100;
+    if(!isDeleting && charIndex === current.length) {
+        speed = 1500;
+        isDeleting = true;
+    }else if(isDeleting && charIndex === 0){
+        isDeleting = false;
+        titleIndex = (titleIndex + 1) % titles.length;
+        speed = 400;
+    }
+
+    setTimeout(type, speed)
+}
+type();
