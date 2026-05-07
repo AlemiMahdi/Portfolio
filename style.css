@@ -486,6 +486,18 @@ header {
     color: var(--text-muted);
 }
 
+.cursor {
+    color: var(--primary);
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
+
 /* ===== breakpoint at 916px ===== */
 @media (max-width: 916px) {
     .main-section {
