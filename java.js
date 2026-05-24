@@ -128,3 +128,46 @@ function type(){
     setTimeout(type, speed)
 }
 type();
+
+const apiKey = "2c4668fc513670b11af248477540cbf1";
+const city = "Stockholm";
+
+async function fetchWeather() {
+    const widget = document.getElementById("weather-widget");
+
+    try {
+        const response = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+        );
+
+        if (!response.ok) throw new Error("Weather fetch failed");
+
+        const data = await response.json();
+
+        const icon = data.weather[0].icon;
+        const desc = data.weather[0].description;
+        const temp = Math.round(data.main.temp);
+        const feelsLike = Math.round(data.main.feels_like);
+        const humidity = data.main.humidity;
+        const location = data.name;
+
+        widget.innerHTML = `
+            <div class="weather-widget-content">
+                <span class="weather-city">📍 ${location}</span>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}" style="width: 50px;">
+                    <span class="weather-temp">${temp}°C</span>
+                </div>
+                <span class="weather-desc">${desc}</span>
+                <div class="weather-details">
+                    <span>🌡️ Feels like ${feelsLike}°C</span>
+                    <span>💧 ${humidity}%</span>
+                </div>
+            </div>
+        `;
+    } catch (error) {
+        widget.innerHTML = `<p class="weather-error">Could not load weather data.</p>`;
+    }
+}
+
+fetchWeather();
