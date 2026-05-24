@@ -486,6 +486,50 @@ header {
     color: var(--text-muted);
 }
 
+
+.footer-weather h4{
+    color: var(--light);
+    margin-bottom: 1rem;
+    font-size: 1rem;    
+}
+.weather-widget-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.weather-city{
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.weather-temp{
+    color: var(--light);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.weather-desc{
+    color: var(--light);
+    font-size: 2rem;
+    font-weight: 700;
+}
+.weather-details{
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+.weather-details span{
+    color: var(--text-light);
+    font-size: 0.8rem;
+}
+.weather-loading{
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+.weather-error{
+    color: red;
+    font-size: 0.85rem;
+}
+
 .cursor {
     color: var(--primary);
     animation: blink 0.7s infinite;
@@ -560,6 +604,8 @@ header {
     color: var(--primary);
     font-size: 0.8rem;
 }
+
+
 
 /* ===== breakpoint at 916px ===== */
 @media (max-width: 916px) {
@@ -657,6 +703,10 @@ header {
     .testimonial-card{
         width: 100%;
         max-width: 500px;
+    }
+
+    .footer-weather{
+        text-align: center;
     }
 }
 
