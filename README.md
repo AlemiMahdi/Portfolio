@@ -84,5 +84,5 @@ portfolio/
 
 ## 📬 Contact
 
-- GitHub: [github.com/AlemiMahdi](https://github.com/AlemiMahdi)
-- Email: din@email.com
+- GitHub: (https://github.com/AlemiMahdi)
+- Email: mahdi.alemi97@yahoo.com
