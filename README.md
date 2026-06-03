@@ -5,7 +5,7 @@ A personal portfolio website built with HTML, CSS and JavaScript as part of a fr
 ---
 
 ## 🌐 Live Demo
-*Coming soon*
+https://portfolio-kappa-blond-47.vercel.app/
 
 ---
 
